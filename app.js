@@ -16,8 +16,7 @@ app.use(morgan("dev"));
 
 /* Routes */
 app
-  // .get("/api", (req, res) => res.sendFile(`${__dirname}/API.html`))
-  .get("/api", (req, res) => res.send("Hello World"))
+  .get("/api", (req, res) => res.sendFile(`${__dirname}/API.html`))
   .post("/api/purchase", controller.purchase)
   .post("/api/saleDetails", controller.saleDetails)
   .get("/api/books", controller.getBooks)
