@@ -7,13 +7,14 @@ const rivhit_url = "https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/
 
 const purchase = (req, res) => {
   let badRequest = false;
-  let books = req.body;
+  let { Items, details } = req.body;
+  console.log(Items, details);
   const stock = db.select("books");
-  if (!books || books.length === 0) {
+  if (!Items || Items.length === 0) {
     res.status(400).send("No books to purchase");
     return;
   }
-  books = books.map((book) => {
+  Items = Items.map((book) => {
     const stockBook = stock.find((b) => b.CatalogNumber == book.CatalogNumber);
     if (!stockBook) {
       res
@@ -38,7 +39,8 @@ const purchase = (req, res) => {
         RedirectURL: "http://www.rivhit.co.il",
         ExemptVAT: true,
         MaxPayments: 12,
-        Items: books,
+        Items: Items,
+        ...details,
       }
     )
     .then((response) => {

@@ -21,3 +21,30 @@
   "SaleId":"ec52aaf8-743f-4e89-a74b-6646e11610f6",
   "TotalAmount":150.90
 }
+
+
+
+{
+  "details":{
+    "CustomerFirstName": "אייל",
+    "CustomerLastName": "לוי",
+    "Address": "דיזנגוף החדשה",
+    "POB": "16",
+    "City": "פתח תקווה",
+    "PhoneNumber": "054-5555555",
+    "EmailAddress": "kgd@google.com",
+    "Zipcode": "12345",
+    "IdNumber": "123456789",
+    "SendMail": true
+  },
+  "Items": [
+    {
+      "CatalogNumber": "1111",
+      "Quantity": 1
+    },
+    {
+      "CatalogNumber": "4444",
+      "Quantity": 2
+    }
+  ]
+}
