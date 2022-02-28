@@ -1,0 +1,23 @@
+{
+  "GroupPrivateToken": "bb8a47ab-42e0-4b7f-ba08-72d55f2d9e41",
+  "Items": [
+    {
+      "CatalogNumber": "123abc",
+      "Quantity": 3,
+      "UnitPrice": 55.9,
+      "Description ": "שרשרת פנינים"
+    }
+  ],
+  "RedirectURL": "http://www.rivhit.co.il",
+  "ExemptVAT": true,
+  "MaxPayments": 12,
+  "CustomerFirstName": "נחמן",
+  "CustomerLastName": "ישראלי"
+},
+
+
+{
+  "GroupPrivateToken":"1627aea5-8e0a-4371-9022-9b504344e724",
+  "SaleId":"ec52aaf8-743f-4e89-a74b-6646e11610f6",
+  "TotalAmount":150.90
+}

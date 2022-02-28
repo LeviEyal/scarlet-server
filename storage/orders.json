@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "name": "Coffee",
+      "price": "2.00",
+      "quantity": "1"
+    },
+    {
+      "id": "2",
+      "name": "Tea",
+      "price": "1.00",
+      "quantity": "1"
+    },
+    {
+      "id": "3",
+      "name": "Milk",
+      "price": "3.00",
+      "quantity": "1"
+    }
+  ]
+}

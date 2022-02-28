@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Description</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #333;
+      background-color: #fff;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      background-color: antiquewhite;
+      border: #333 solid 1px;
+    }
+    .title {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    li {
+      margin-left: 20px;
+      background-color: rgb(217, 251, 252);
+      padding: 10px;
+      margin: 10px;
+      border: #333 solid 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Scarlet Books - Server API</h1>
+    <ul>
+      <li>
+        <a href="/api/purchase">POST /api/purchase</a>
+        <p>
+          <strong>Request body:</strong>
+          <pre>
+              [
+                {
+                  "CatalogNumber": "123456789",
+                  "Quantity": 1
+                },
+                {
+                  "CatalogNumber": "987654321",
+                  "Quantity": 2
+                }
+              ]
+          </pre>
+      </li>
+      <li>
+        <a href="/api/saleDetails">POST /api/saleDetails</a>
+      </li>
+      <li>
+        <a href="/api/books">GET /api/books</a>
+      </li>
+      <li>
+        <a href="/api/books">POST /api/books</a>
+        <p>
+          <strong>Request body:</strong>
+          <pre>
+            {
+              "CatalogNumber": "1111",
+              "IsDigital": false,
+              "ImageURL": "images/books/book_cover.jpg",
+              "Description": "ספר לדוגמה 1",
+              "Info": "תיאור של הספר",
+              "UnitPrice": 70.9,
+              "inStock": true
+            }
+          </pre>
+        </p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

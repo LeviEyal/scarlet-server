@@ -1,0 +1,76 @@
+{
+  "books": [
+    {
+      "CatalogNumber": "1111",
+      "IsDigital": false,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 1",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 70.9,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": "2222",
+      "IsDigital": false,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 2",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 80.9,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": "3333",
+      "IsDigital": false,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 3",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 90.9,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": "44444",
+      "IsDigital": false,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 4",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 100.9,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": "5555",
+      "IsDigital": true,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 5",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 10.9,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": "6666",
+      "IsDigital": true,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 5",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 10.9,
+      "inStock": true
+    }
+  ],
+  "orders": [
+    {
+      "PrivateSaleToken": "158717c9-d803-4d62-af5f-8d840d1c29d9",
+      "PublicSaleToken": "ae4b0b6c-9b46-426e-b2c2-a27079f115d8"
+    },
+    {
+      "PrivateSaleToken": "711a24d0-7397-40a1-8fd2-a1afa76555ec",
+      "PublicSaleToken": "fef893da-0b20-4449-bd17-88307f75f625"
+    },
+    {
+      "PrivateSaleToken": "97ee8bf8-e895-4e80-b213-8fe2a12f4934",
+      "PublicSaleToken": "dcfc8099-07f7-42da-8959-f835e1dcb94a"
+    },
+    {
+      "PrivateSaleToken": "c577fec7-7b4d-48a2-8e9d-b8af7085e0c6",
+      "PublicSaleToken": "564f0472-4abd-443b-a42e-bc4c7803cd2b"
+    }
+  ]
+}
