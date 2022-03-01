@@ -5,42 +5,24 @@ require("dotenv").config();
 const db = storage("./storage/books.json");
 const rivhit_url = "https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/";
 
+let redirectURL = "";
+if (process.env.NODE_ENV === "production") {
+  redirectURL = "https://scarlet-server.herokuapp.com/redirectURL";
+} else {
+  redirectURL = "http://localhost:5000/redirectURL";
+}
+  
 const purchase = (req, res) => {
-  let badRequest = false;
-  let { Items, details } = req.body;
-  console.log(Items, details);
-  const stock = db.select("books");
-  if (!Items || Items.length === 0) {
-    res.status(400).send("No books to purchase");
-    return;
-  }
-  Items = Items.map((book) => {
-    const stockBook = stock.find((b) => b.CatalogNumber == book.CatalogNumber);
-    if (!stockBook) {
-      res
-        .status(400)
-        .send(`Book with CatalogNumber ${book.CatalogNumber} not found`);
-      badRequest = true;
-      return;
-    }
-    return {
-      ...stockBook,
-      Quantity: book.Quantity,
-    };
-  });
-  if (badRequest) {
-    return;
-  }
   axios
     .post(
       `${rivhit_url}/GetUrl`,
       {
         GroupPrivateToken: process.env.GROUP_PRIVATE_TOKEN,
-        RedirectURL: "http://www.rivhit.co.il",
+        RedirectURL: redirectURL,
         ExemptVAT: true,
         MaxPayments: 12,
-        Items: Items,
-        ...details,
+        Items: req.body.Items,
+        ...req.body.details,
       }
     )
     .then((response) => {
@@ -110,3 +92,5 @@ module.exports = {
   getBooks,
   addBook,
 };
+
+

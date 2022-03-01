@@ -53,6 +53,15 @@
       "Info": "תיאור של הספר",
       "UnitPrice": 10.9,
       "inStock": true
+    },
+    {
+      "CatalogNumber": "7777",
+      "IsDigital": true,
+      "ImageURL": "images/books/book_cover.jpg",
+      "Description": "ספר לדוגמה 7",
+      "Info": "תיאור של הספר",
+      "UnitPrice": 10.9,
+      "inStock": true
     }
   ],
   "orders": [
@@ -83,6 +92,30 @@
     {
       "PrivateSaleToken": "d51ea64f-c5b5-4648-bc7b-43e7131fdf5f",
       "PublicSaleToken": "de36c526-e308-4b04-a9ce-17ce07b88fb9"
+    },
+    {
+      "PrivateSaleToken": "48e0119e-d393-4ca9-be36-453ab6e66213",
+      "PublicSaleToken": "8a15ec59-afe9-462b-b58d-8c98a086d7a8"
+    },
+    {
+      "PrivateSaleToken": "f93d6272-52ad-4585-9fca-a307d56a3d63",
+      "PublicSaleToken": "817f87fd-4e2d-4d11-9dee-f3933edc4b07"
+    },
+    {
+      "PrivateSaleToken": "5c432164-93fd-4045-bbbf-b834b595cf4f",
+      "PublicSaleToken": "20a315ad-217b-48d3-b941-7af70b0c1893"
+    },
+    {
+      "PrivateSaleToken": "9de54aca-35db-4b40-8fcf-d0383af79026",
+      "PublicSaleToken": "620b7417-7c4f-4b1c-bd16-905d655e1f27"
+    },
+    {
+      "PrivateSaleToken": "d438bd73-1ae0-44d7-a202-7b9c3048339b",
+      "PublicSaleToken": "cc22b2dd-89fd-4786-a535-40c46be9e058"
+    },
+    {
+      "PrivateSaleToken": "437a06c3-5461-4407-ae2a-8153c7f5f68a",
+      "PublicSaleToken": "ec40009f-216e-41ef-ba9c-8b4d66e9320c"
     }
   ]
 }

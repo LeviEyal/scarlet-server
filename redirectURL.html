@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fafafa;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: right;
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+        border: #333 solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>הזמנתך התקבלה!</h1>
+    <h2>Your token:</h2>
+    <p id="token"></p>
+    <p id="details"></p>
+  </body>
+  <script>
+    const token = window.location.search.match(/Token=([^&]*)/)[1];
+    console.log(
+      "http://localhost:5000/api/saleDetails/?PublicSaleToken=" + token
+    );
+    document.getElementById("token").innerHTML = token;
+
+    fetch("http://localhost:5000/api/saleDetails/?PublicSaleToken=" + token, {
+      method: "POST",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const items = data.Items.map((item) => {
+          return `<li class="item">
+                <p>${item.Description}</p>
+                <p>${item.Quantity}</p>
+                <p>${item.UnitPrice}</p>
+            </li>`;
+        });
+        document.getElementById("details").innerHTML = `
+        <div class="container">
+            <p>שם: ${data.CustomerFirstName}</p>
+            <p>אימייל: ${data.EmailAddress}</p>
+            <p>כתובת: ${data.Address}</p>
+            <p>עיר: ${data.City}</p>
+            <p>פריטים שנקנו: ${items}</p>
+            <p>סה"כ שולם: ${data.Amount} ש"ח</p>
+        </div>
+        `;
+      })
+      .catch((err) => console.log(err));
+  </script>
+</html>
