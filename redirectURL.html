@@ -45,11 +45,11 @@
   <script>
     const token = window.location.search.match(/Token=([^&]*)/)[1];
     console.log(
-      "http://localhost:5000/api/saleDetails/?PublicSaleToken=" + token
+      "api/saleDetails/?PublicSaleToken=" + token
     );
     document.getElementById("token").innerHTML = token;
 
-    fetch("http://localhost:5000/api/saleDetails/?PublicSaleToken=" + token, {
+    fetch("/api/saleDetails/?PublicSaleToken=" + token, {
       method: "POST",
     })
       .then((res) => res.json())
