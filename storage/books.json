@@ -1,6 +1,24 @@
 {
   "books": [
     {
+      "CatalogNumber": 999991,
+      "IsDigital": false,
+      "Description": "איסוף עצמי",
+      "Info": "איסוף עצמי (חינם)",
+      "ImageURL": "",
+      "UnitPrice": 0,
+      "inStock": true
+    },
+    {
+      "CatalogNumber": 999992,
+      "IsDigital": false,
+      "Description": "משלוח עד הבית",
+      "Info": "",
+      "ImageURL": "",
+      "UnitPrice": 30.0,
+      "inStock": true
+    },
+    {
       "CatalogNumber": "1111",
       "IsDigital": false,
       "ImageURL": "images/books/book_cover.jpg",
